@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-body">
+        <!-- we use the bootstrap media component to show an avatar with content -->
+        <div class="media">
+          <img
+            class="avatar mr-3 rounded"
+            [src]="post?.profile?.avatar"
+            alt=""
+          />
+          <div class="media-body">
+            <!-- the full name of author is used to navigate to post detail -->
+            <h5>
+              <a [routerLink]="post?.profile?.id">{{
+                post?.profile?.fullName
+              }}</a>
+              <span class="date float-right text-muted"></span>
+            </h5>
+            <!-- the text of the post is shown in simple paragraph tag -->
+            <p>{{ post?.text }}</p>
+          </div>
+        </div>
+        <!-- end media -->
+      </div>
+    </div>
+  </div>
+</div>
